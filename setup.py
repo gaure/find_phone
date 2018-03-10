@@ -30,7 +30,7 @@ setup(
                 "pandas",
                 "scipy",
                 "opencv-python",
-                "sckit-learn",
+                "scikit-learn",
                 "Pillow"
             ],
 )
