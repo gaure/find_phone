@@ -1,4 +1,11 @@
-To install tf_unet
+Find Phone Detector
+
+This application uses a tf_unet network to detect a phone in a picture.
+
+Installation
+
+1. Clone the repository of the application using the below command:
+
 
 1. Create a new python 2.7 environment
 2. Execute pip install -r requirements
