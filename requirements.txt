@@ -32,5 +32,4 @@ subprocess32==3.2.7
 tensorboard==1.6.0
 tensorflow==1.6.0
 termcolor==1.1.0
-tf-unet==0.1.1
 Werkzeug==0.14.1
