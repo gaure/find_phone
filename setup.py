@@ -31,6 +31,7 @@ setup(
                 "scipy",
                 "opencv-python",
                 "scikit-learn",
-                "Pillow"
+                "Pillow",
+                "tensorflow"
             ],
 )
