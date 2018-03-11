@@ -9,7 +9,7 @@ This python application uses the opencv library and in linux the gtk library mus
 
 1. Clone the repository of the application using the below command:
 
-$>git clone https://github.com/gaure/find_phone.git
+$>git clone --recurse-submodules https://github.com/gaure/find_phone.git
 
 2. Install the requirements by running
 
