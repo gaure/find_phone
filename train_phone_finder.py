@@ -1,6 +1,9 @@
 import utils
 import argparse
 
+# Supress tensorflow warnings
+os.environ["TF_CPP_MIN_LOG_LEVEL"]="2"
+
 ##################################################
 # Build the argument parser                      #
 ##################################################

@@ -9,6 +9,10 @@ import math
 from tf_unet import unet, util, image_util
 import re
 import argparse
+import logging
+
+# Supress loggings from tf-unet
+logging.getLogger().setLevel(logging.WARNING)
 
 
 ##################################################

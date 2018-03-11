@@ -4,6 +4,8 @@ import os
 import utils
 from PIL import Image
 
+# Supress tensorflow warnings
+os.environ["TF_CPP_MIN_LOG_LEVEL"]="2"
 
 ##################################################
 # Build the argument parser                      #
@@ -49,7 +51,6 @@ if chn != 3:
 
 # Check that the model was trained by checking for the bottlenecks
 if os.path.isfile('unet_trained/checkpoint') and os.stat('unet_trained/checkpoint')[6] > 0:
-    print("Predicting...")
     # Build model
     net = utils.unet.Unet(channels=chn, n_class=2, layers=3, features_root=16)
     # Load test image
