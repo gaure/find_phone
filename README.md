@@ -1,9 +1,12 @@
 # Find Phone Detector
 
-This application uses a tf_unet network to detect a phone in a picture.
+This application uses a tf_unet network to detect a phone in a picture. The repository contains two scripts which are the main application logic:
+
 
 ## OS Requirements
 This python application uses the opencv library and in linux the gtk library must be installed in order to make this application works.
+
+The application was tested with python 2.7
 
 ## Installation
 
@@ -21,6 +24,25 @@ $>python setup.py install --user
 
 # Instruction
 
+* Make sure that none of the following files/folders be in the root directory of the tool when you run it for the first
+time:
+prediction
+unet_trained
+training_images.pckl
+
+* After training the model the first time the following files and folders will be created:
+prediction
+unet_trained
+training_images.pckl
+
+* The "prediction" and "unet_training" folder contains information of the trained model. The une_training contains the bottleneck that will be loaded at the prediction time. Every time the model is training these folders are deleted and re-created.
+
+* The "training_images.pckl" pickle file is createad only once and persists across multiple training instances: !!!!!!!!!!!!WARNING if the source directory of the images change after the training_images.pckl file is created, the training process will fail if it is execute again. If you need to add or remove images from the training dataset make sure you delete this pickle file WARNING!!!!!!!!!!!!!!!!
+
+* !!!!!!!!!!!!WARNING The tool requires that each image has an unique mask image that are created during the training process. Make sure the tool has privileges to write in the folder where the images are located. The masks are created once, if the training is run again the mask will not be created if they exist.WARNING!!!!!!!!!!!!!!
+
+## How to use it.
+
 1) train_phone_finder.py ​ takes a single command line argument which is a path to a folder with labeled images and ​ labels.txt​ ​ that has been attached to this description. This script may generate any artifacts you want in the current folder.
 Here is what a terminal command will look like:
 > python train_phone_finder.py ~/find_phone
@@ -34,6 +56,7 @@ float numbers on a single line without parentheses (!):
 # Improvement
 This was created as part of an exercise and is by no mean production program. It requires the following improvement.
 
-a. The tensorflow libraries used in the program are an old version and during the execution a lot of warnings are produced.
-b. Model has not been fully optimized.
-c. To deploy it in multiple platforms is necessary to create a package.
+* The tensorflow libraries used in the program are an old version and during the execution a lot of warnings are produced. Warning were substracted but in order to avoid future problems the tf_unet library needs to be modified.
+* Model has not been fully optimized.
+* To deploy it in multiple platforms is necessary to create a package.
+* More image can improve the performance.

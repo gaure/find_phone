@@ -62,7 +62,6 @@ if os.path.isfile('unet_trained/checkpoint') and os.stat('unet_trained/checkpoin
     # Reshpae image into tensor
     img = img.reshape(1, img.shape[0], img.shape[1], img.shape[2])
     # Make the prediction
-    #prediction = net.predict("/home/gaure/Google_Drive/Machine_Learning/BrainCorp/unet_trained/model.cpkt", img)
     prediction = net.predict("unet_trained/model.cpkt", img)
     # Get the mask pixels that are part of the detected phone
     phone_pixels = prediction[0,...,0] > 0.9
