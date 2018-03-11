@@ -3,6 +3,10 @@ import argparse
 import os
 import utils
 from PIL import Image
+import logging
+
+# Supress loggings from tf-unet
+logging.getLogger().setLevel(logging.WARNING)
 
 # Supress tensorflow warnings
 os.environ["TF_CPP_MIN_LOG_LEVEL"]="2"
