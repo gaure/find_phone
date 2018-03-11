@@ -1,11 +1,11 @@
-Find Phone Detector
+# Find Phone Detector
 
 This application uses a tf_unet network to detect a phone in a picture.
 
-# OS Requirements
+## OS Requirements
 This python application uses the opencv library and in linux the gtk library must be installed in order to make this application works.
 
-# Installation
+## Installation
 
 1. Clone the repository of the application using the below command:
 
@@ -15,9 +15,7 @@ $>git clone https://github.com/gaure/find_phone.git
 
 $>pip install -r requirements.txt
 
-3. Create the tf-unet model by following the steps below
-
-a. Change to the directory tf_unet and run the command below:
+3. Change to the directory tf_unet and run the command below:
 
 $>python setup.py install --user
 
