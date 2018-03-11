@@ -1,6 +1,6 @@
 # Find Phone Detector
 
-This application uses a tf_unet network to detect a phone in a picture. The repository contains two scripts which are the main application logic:
+This application uses a tf_unet (http://tf-unet.readthedocs.io/en/latest/index.html) network to detect a phone in a picture. The repository contains two scripts which are the main application logic:
 
 
 ## OS Requirements
